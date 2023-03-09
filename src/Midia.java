@@ -3,7 +3,8 @@ public class Midia {
     private int year;
     private String gender;
 
-    Midia () {}
+    Midia() {
+    }
 
     public String getTitle() {
         return title;
