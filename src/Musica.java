@@ -3,7 +3,12 @@ public class Musica extends Midia {
     private String artist;
     private int notes;
 
-    Musica () {}
+    public Musica (String title, int year, String gender, double duration, String artist, int notes) {
+        super(title, year, gender);
+        this.duration = duration;
+        this.artist = artist;
+        this.notes = notes;
+    }
 
     public double getDuration() {
         return duration;
