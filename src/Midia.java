@@ -2,10 +2,15 @@ public class Midia {
     private String title;
     private int year;
     private String gender;
-
-    Midia() {
+    
+    // Constructor com parâmetros para inicializar os atributos da classe Midia e usar o método super() para chamar o construtor da classe pai
+    public Midia(String title, int year, String gender){
+        this.title = title;
+        this.year = year;
+        this.gender = gender;
     }
 
+    // Getters e Setters
     public String getTitle() {
         return title;
     }
