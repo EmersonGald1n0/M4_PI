@@ -1,17 +1,22 @@
+import java.util.Scanner;
+
 public class BibliotecaDeMidias {
-    public String media;
-    public String user;
-    public String[] playlist;
+    private Midia media;
+    private String user;
+    private Playlist[] playlist;
 
-    public BibliotecaDeMidias() {
-
+    //Construtor
+    public BibliotecaDeMidias(String user, Playlist... playlist) {
+        this.playlist = playlist;
+        this.user = user;
     }
 
-    public String getMedia() {
+    // Getters and Setters
+    public Midia getMedia() {
         return media;
     }
 
-    public void setMedia(String media) {
+    public void setMedia(Midia media) {
         this.media = media;
     }
 
@@ -23,11 +28,30 @@ public class BibliotecaDeMidias {
         this.user = user;
     }
 
-    public String[] getPlaylist() {
+    public Playlist[] getPlaylist() {
         return playlist;
     }
 
-    public void setPlaylist(String[] playlist) {
+    public void setPlaylist(Playlist[] playlist) {
         this.playlist = playlist;
+    }
+    
+    // Método para iniciar a biblioteca
+    public void play_playlist(){
+        start_playlist();
+    }
+
+    //Método para iniciar a playlist Música ou Filme
+    public void start_playlist(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Qual playlist deseja curtir hoje, Músicas ou Filmes? (1) Músicas (2) Filmes");
+        int response = input.nextInt();
+        if(response == 1){
+            this.playlist[0].playlist(false, 0);
+        } else if(response == 2){
+            this.playlist[1].playlist(true, 0);
+        } else {
+            System.out.println("Opção inválida!");
+        }
     }
 }
