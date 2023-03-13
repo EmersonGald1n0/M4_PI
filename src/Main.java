@@ -1,5 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Biblioteca de Mídias");
+        
+        Playlist list = new Playlist();
+
+        BibliotecaDeMidias biblioteca = new BibliotecaDeMidias("Emerson", list, list);
+
+        biblioteca.play_playlist();
     }
 }
