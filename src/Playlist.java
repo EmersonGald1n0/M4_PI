@@ -1,24 +1,25 @@
 public class Playlist {
-    private String media;
-    private int executionOrder;
+    private String namePlaylist;
+    private Midia[] executionOrder;
     private int currentMedia;
 
     public Playlist() {
+        
     }
 
-    public String getMedia() {
-        return media;
+    public String getNamePlaylist() {
+        return namePlaylist;
     }
 
-    public void setMedia(String media) {
-        this.media = media;
+    public void setNamePlaylist(String namePlaylist) {
+        this.namePlaylist = namePlaylist;
     }
 
-    public int getExecutionOrder() {
+    public Midia[] getExecutionOrder() {
         return executionOrder;
     }
 
-    public void setExecutionOrder(int executionOrder) {
+    public void setExecutionOrder(Midia[] executionOrder) {
         this.executionOrder = executionOrder;
     }
 
@@ -28,5 +29,23 @@ public class Playlist {
 
     public void setCurrentMedia(int currentMedia) {
         this.currentMedia = currentMedia;
+    }
+
+    // Método para tocar a próxima mídia da playlist
+    public void nextMedia() {
+        if (this.currentMedia < this.executionOrder.length - 1) {
+            this.currentMedia++;
+        } else {
+            this.currentMedia = 0;
+        }
+    }
+
+    // Método para tocar a mídia anterior da playlist
+    public void previousMedia() {
+        if (this.currentMedia > 0) {
+            this.currentMedia--;
+        } else {
+            this.currentMedia = this.executionOrder.length - 1;
+        }
     }
 }
