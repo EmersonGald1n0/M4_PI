@@ -59,8 +59,10 @@ public class Playlist {
 
         int count = 0;
         while (count == 0) {
-            System.out.println(statusActive + this.executionOrder[this.currentMedia].getTitle());
-            System.out.println(question);
+            System.out.println(statusActive + this.executionOrder[this.currentMedia].getTitle() + " " + 
+            this.executionOrder[this.currentMedia].getYear() + " " +
+            this.executionOrder[this.currentMedia].getGender());
+            System.out.println("\n" + question);
             response = input.nextLine();
             if (response.equals("1")) {
                 System.out.println("Tocando mídia...");
@@ -112,22 +114,22 @@ public class Playlist {
     // Método para criar midia filme
     public void create_movie(){
         Ator[] cast = new Ator[7];
-        cast[0] = new Ator("Ator 1", "18/08/1974", "Oscar 2022", "Mascuilino", "Formação 1");
-        cast[1] = new Ator("Ator 2", "18/08/1974", "Oscar 2022", "Mascuilino", "Formação 1");
-        cast[2] = new Ator("Ator 3", "18/08/1974", "Oscar 2022", "Mascuilino", "Formação 1");
-        cast[3] = new Ator("Ator 4", "18/08/1974", "Oscar 2022", "Mascuilino", "Formação 1");
-        cast[4] = new Ator("Ator 5", "18/08/1974", "Oscar 2022", "Mascuilino", "Formação 1");
-        cast[5] = new Ator("Ator 6", "18/08/1974", "Oscar 2022", "Mascuilino", "Formação 1");
-        cast[6] = new Ator("Ator 7", "18/08/1974", "Oscar 2022", "Mascuilino", "Formação 1");
+        cast[0] = new Ator("Maria", "18/08/1974", "Oscar 2022", "Feminino", "Artes");
+        cast[1] = new Ator("Ana", "11/03/1994", "Oscar 2022", "Feminino", "Cinema");
+        cast[2] = new Ator("Marcelo", "10/07/1983", "Oscar 2022", "Masculino", "Cinema");
+        cast[3] = new Ator("Astrogildo", "23/02/1992", "Oscar 2022", "Masculino", "Teatro");
+        cast[4] = new Ator("Beatriz", "28/01/2003", "Oscar 2022", "Feminino", "Artes, Cinema");
+        cast[5] = new Ator("Joao", "06/12/2001", "Oscar 2022", "Masculino", "Cinema, Teatro");
+        cast[6] = new Ator("Lucas", "02/10/1990", "Oscar 2022", "Masculino", "Teatro");
 
         Filme[] movies = new Filme[7];
-        movies[0] = new Filme("Filme 1", 2021, "Ação", 1.30, "Longa metragem", cast, "Diretor 1", "Produtor 1");
-        movies[1] = new Filme("Filme 2", 2021, "Ação", 1.30, "Longa metragem", cast, "Diretor 2", "Produtor 2");
-        movies[2] = new Filme("Filme 3", 2021, "Ação", 1.30, "Longa metragem", cast, "Diretor 3", "Produtor 3");
-        movies[3] = new Filme("Filme 4", 2021, "Ação", 1.30, "Longa metragem", cast, "Diretor 4", "Produtor 4");
-        movies[4] = new Filme("Filme 5", 2021, "Ação", 1.30, "Longa metragem", cast, "Diretor 5", "Produtor 5");
-        movies[5] = new Filme("Filme 6", 2021, "Ação", 1.30, "Longa metragem", cast, "Diretor 6", "Produtor 6");
-        movies[6] = new Filme("Filme 7", 2021, "Ação", 1.30, "Longa metragem", cast, "Diretor 7", "Produtor 7");
+        movies[0] = new Filme("Busca Implacável", 2018, "Ação", 1.30, "Longa metragem", cast, "Diretor 1", "Produtor 1");
+        movies[1] = new Filme("Busca Implacável 2", 2009, "Ação", 1.30, "Longa metragem", cast, "Diretor 2", "Produtor 2");
+        movies[2] = new Filme("Se beber não case", 2005, "Comédia", 1.30, "Longa metragem", cast, "Diretor 3", "Produtor 3");
+        movies[3] = new Filme("Interestellar", 2013, "Ficção Científica", 1.30, "Longa metragem", cast, "Diretor 4", "Produtor 4");
+        movies[4] = new Filme("Velozes e Furiosos", 2014, "Ação", 1.30, "Longa metragem", cast, "Diretor 5", "Produtor 5");
+        movies[5] = new Filme("Duro de Matar 2", 2015, "Ação", 1.30, "Longa metragem", cast, "Diretor 6", "Produtor 6");
+        movies[6] = new Filme("Shrek", 2020, "Comédia", 1.30, "Longa metragem", cast, "Diretor 7", "Produtor 7");
 
         this.executionOrder = movies;
     }
@@ -135,22 +137,22 @@ public class Playlist {
     // Método para criar músicas
     public void create_music(){
         Artista[] artist = new Artista[7];
-        artist[0] = new Artista("Chorão", "12/10/1971", "MTV Awards", "Masculino");
-        artist[1] = new Artista("Chorão", "12/10/1971", "MTV Awards", "Masculino");
-        artist[2] = new Artista("Chorão", "12/10/1971", "MTV Awards", "Masculino");
-        artist[3] = new Artista("Chorão", "12/10/1971", "MTV Awards", "Masculino");
-        artist[4] = new Artista("Chorão", "12/10/1971", "MTV Awards", "Masculino");
-        artist[5] = new Artista("Chorão", "12/10/1971", "MTV Awards", "Masculino");
-        artist[6] = new Artista("Chorão", "12/10/1971", "MTV Awards", "Masculino");
+        artist[0] = new Artista("Chorão", "09/04/1970", "Grammy Latino 2010 - Melhor albúm de Rock", "Masculino");
+        artist[1] = new Artista("Chorão", "09/04/1970", "Grammy Latino 2010 - Melhor albúm de Rock", "Masculino");
+        artist[2] = new Artista("Chorão", "09/04/1970", "Grammy Latino 2010 - Melhor albúm de Rock", "Masculino");
+        artist[3] = new Artista("Frank Ocean", "28/10/1987", "Grammy Award 2013 - Melhor colaboração de rap", "Masculino");
+        artist[4] = new Artista("Frank Ocean", "28/10/1987", "Grammy Award 2013 - Melhor colaboração de rap", "Masculino");
+        artist[5] = new Artista("Frank Ocean", "28/10/1987", "Grammy Award 2013 - Melhor colaboração de rap", "Masculino");
+        artist[6] = new Artista("Black Alien", "07/06/1972", "Multishow 2021 - Disco do ano", "Masculino");
 
         Musica[] music = new Musica[7];
-        music[0] = new Musica("Musica 1", 2021, "Rock", 1.30, artist[0], 5);
-        music[1] = new Musica("Musica 2", 2021, "Rock", 1.30, artist[1], 5);
-        music[2] = new Musica("Musica 3", 2021, "Rock", 1.30, artist[2], 5);
-        music[3] = new Musica("Musica 4", 2021, "Rock", 1.30, artist[3], 5);
-        music[4] = new Musica("Musica 5", 2021, "Rock", 1.30, artist[4], 5);
-        music[5] = new Musica("Musica 6", 2021, "Rock", 1.30, artist[5], 5);
-        music[6] = new Musica("Musica 7", 2021, "Rock", 1.30, artist[6], 5);
+        music[0] = new Musica("Lugar ao Sol", 2021, "Rock", 1.30, artist[0], 5);
+        music[1] = new Musica("Dona do Meu Pensamento", 2021, "Rock", 1.30, artist[1], 5);
+        music[2] = new Musica("Uma Criança Com Seu Olhar", 2021, "Rock", 1.30, artist[2], 5);
+        music[3] = new Musica("Lost", 2021, "Rock", 1.30, artist[3], 5);
+        music[4] = new Musica("Pink+White", 2021, "Rock", 1.30, artist[4], 5);
+        music[5] = new Musica("Chanel", 2021, "Rock", 1.30, artist[5], 5);
+        music[6] = new Musica("Fica até umas hora", 2021, "Rock", 1.30, artist[6], 5);
 
         this.executionOrder = music;
     }
