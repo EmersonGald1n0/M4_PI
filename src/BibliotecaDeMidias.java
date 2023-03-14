@@ -44,7 +44,7 @@ public class BibliotecaDeMidias {
     //Método para iniciar a playlist Música ou Filme
     public void start_playlist(){
         Scanner input = new Scanner(System.in);
-        System.out.println("Qual playlist deseja curtir hoje, Músicas ou Filmes? (1) Músicas (2) Filmes");
+        System.out.println("Qual playlist deseja curtir hoje, Músicas ou Filmes?\nDigite 1 para Músicas \nDigite 2 para Filmes");
         int response = input.nextInt();
         if(response == 1){
             this.playlist[0].playlist(false, 0);
